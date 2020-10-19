@@ -62,6 +62,9 @@ function doPost(e){
     if (start_time.length < 3){
       start_time = start_time + ":00"  // 17 -> 17:00
     }
+    if (end_time.length < 3){
+      end_time = end_time + ":00"  // 17 -> 17:00
+    }
     var start_date = new Date(formatDate(add_date(base_date, index), "yyyy/MM/dd ") + start_time);
     var end_date   = new Date(formatDate(add_date(base_date, index), "yyyy/MM/dd ") + end_time);
     if (shift != "" && "休み".indexOf(shift) == -1){
